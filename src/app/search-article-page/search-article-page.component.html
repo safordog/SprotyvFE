@@ -1,0 +1,12 @@
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="пошук за тегами (для мультипошуку поставте між тегами пробіл)" #box (keyup.enter)="search(box.value)" aria-label="Recipient's username" aria-describedby="basic-addon2">
+</div>
+
+<div class="col-xs-8 col-xs-offset-2">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let article of articles">
+        <a class="list-group-item-action"  target="_blank" href="{{ article.link }}">{{ article.title }}</a>
+        <span> ({{ article.source }})</span>
+    </li>
+  </ul>
+</div>

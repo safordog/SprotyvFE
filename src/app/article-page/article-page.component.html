@@ -1,0 +1,8 @@
+<div class="col-xs-8 col-xs-offset-2">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let article of articles">
+        <a class="list-group-item-action"  target="_blank" href="{{ article.link }}">{{ article.title }}</a>
+        <span> ({{ article.source }})</span>
+    </li>
+  </ul>
+</div>
